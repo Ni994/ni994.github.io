@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Nicolas Escobar</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.foto {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+nav a {
+  color: #94a3b8;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero span {
+  color: #22c55e;
+}
+
+/* BOTÃO */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #22c55e;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #020617;
+  padding: 25px;
+  width: 260px;
+  border-radius: 12px;
+}
+
+/* CONTATO */
+.contato {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+       <img src="foto.jpg" class="foto">
+    <h2>Nicolas Escobar Saraiva </h2>
+  </div>
+
+  <nav>
+    <a href="#">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Olá, eu sou <span>Nicolas Escobar </span></h1>
+  <h2 id="digitando"></h2>
+
+  <a href="https://wa.me/5511940629797?text=Olá Nicolas, vi seu site!" target="_blank">
+    <button>Fale comigo</button>
+  </a>
+</section>
+
+<section id="sobre" class="cards">
+  <div class="card">
+    <h3>Sobre mim</h3>
+    <p>Sou estudante de Análise e Desenvolvimento de Sistemas no UNASP, focado em desenvolvimento web e crescimento profissional na área de tecnologia.</p>
+  </div>
+
+  <div class="card">
+    <h3>Habilidades</h3>
+    <p>HTML, CSS, JavaScript (iniciante), lógica de programação e noções de banco de dados.</p>
+  </div>
+
+  <div class="card">
+    <h3>Objetivo</h3>
+    <p>Busco uma oportunidade na área de TI para desenvolver minhas habilidades e contribuir com projetos reais.</p>
+  </div>
+</section>
+
+<section id="projetos" class="cards">
+  <div class="card">
+    <h3>Site Pessoal</h3>
+    <p>Projeto de portfólio desenvolvido por mim com HTML, CSS e JavaScript.</p>
+  </div>
+
+  <div class="card">
+    <h3>Landing Page</h3>
+    <p>Página simples de apresentação com layout responsivo.</p>
+  </div>
+
+  <div class="card">
+    <h3>Estudos</h3>
+    <p>Projetos práticos focados em aprendizado e evolução constante.</p>
+  </div>
+</section>
+
+<section id="contato" class="contato">
+  <h2>Contato</h2>
+  <p>Instagram: @nicolasaraaiva</p>
+  <p>Email: nicolauescobar@gmail.com</p>
+
+  <a href="mailto:nicolauescobar@gmail.com?subject=Contato pelo site">
+    <button>Enviar Email</button>
+  </a>
+</section>
+
+<footer>
+  <p>© 2026 Nicolas Escobar Saraiva</p>
+</footer>
+
+<script>
+const texto = "Desenvolvedor em formação...";
+let i = 0;
+
+function escrever() {
+  if (i < texto.length) {
+    document.getElementById("digitando").innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(escrever, 50);
+  }
+}
+
+escrever();
+</script>
+
+</body>
+</html>
